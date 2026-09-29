@@ -1,0 +1,24 @@
+{
+  "name": "perf-testing-platform",
+  "version": "0.1.0",
+  "description": "Unified performance testing platform. Phase 1: code-first backend load testing with baseline tracking and regression detection.",
+  "type": "module",
+  "bin": {
+    "perf-test": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "perf": "tsx src/cli/index.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "example": "tsx src/cli/index.ts run examples/backend/hello-load-test.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "license": "MIT"
+}
